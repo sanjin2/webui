@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>jQuery鼠标悬停向上滑出遮罩效果 - xw素材网</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			
+			img {
+				border: 0;
+			}
+			
+			#zzsc {
+				height: auto;
+				width: 820px;
+				margin: 100px auto;
+				overflow: hidden;
+			}
+			
+			#zzsc ul li {
+				width: 396px;
+				height: 165px;
+				overflow: hidden;
+				float: left;
+				margin: 0px 10px 10px 0px;
+				position: relative;
+			}
+			
+			#zzsc ul li .text {
+				width: 100%;
+				height: 0;
+				overflow: hidden;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				background: rgba(255, 90, 88, 0.8);
+				font-size: 12px;
+				color: #fff;
+			}
+			
+			#zzsc ul li .text p {
+				text-align: left;
+				color: #fff;
+				line-height: 180%;
+				padding: 5px 10px;
+				clear: both
+			}
+			
+			#zzsc ul li .text b {
+				display: block;
+				padding: 5px 10px;
+				display: block;
+				float: left;
+				background: #333;
+				margin-bottom: 5px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- 代码部分begin -->
+		<div id="zzsc">
+			<ul>
+				<li>
+					<a href="http://www.xwcms.net/"><img src="images/1.jpg" /></a>
+					<div class="text">
+						<b>菜单导航</b>
+						<p>xw素材网提供jquery特效,css3动画,网页特效代码,广告代码等网页特效素材免费下载。</p>
+					</div>
+				</li>
+				<li>
+					<a href="http://www.xwcms.net/"><img src="images/2.jpg" /></a>
+					<div class="text">
+						<b>xw素材网</b>
+						<p>xw素材网提供jquery特效,css3动画,网页特效代码,广告代码等网页特效素材免费下载。</p>
+					</div>
+				</li>
+				<li>
+					<a href="http://www.xwcms.net/"><img src="images/3.jpg" /></a>
+					<div class="text">
+						<b>xw素材网</b>
+						<p>xw素材网提供jquery特效,css3动画,网页特效代码,广告代码等网页特效素材免费下载。</p>
+					</div>
+				</li>
+				<li>
+					<a href="http://www.xwcms.net/"><img src="images/4.jpg" /></a>
+					<div class="text">
+						<b>xw素材网</b>
+						<p>xw素材网提供jquery特效,css3动画,网页特效代码,广告代码等网页特效素材免费下载。</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<script src="js/jquery.min.js"></script>
+		<script>
+			$(function() {
+				$('#zzsc li').hover(function() {
+					$('.text', this).stop().animate({
+						height: '165px'
+					});
+				}, function() {
+					$('.text', this).stop().animate({
+						height: '0'
+					});
+				});
+			});
+		</script>
+		<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+			<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. </p>
+			<p>来源：
+				<a href="http://www.xwcms.net/" target="_blank">xw素材网</a>
+			</p>
+		</div>
+	</body>
+
+</html>
